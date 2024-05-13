@@ -1,9 +1,9 @@
 /* istanbul ignore file */
-const container = require('../src/Infrastructures/container');
-const createServer = require('../src/Infrastructures/http/createServer');
-const { Ratelimit } = require('@upstash/ratelimit');
 const { kv } = require('@vercel/kv');
 const requestIp = require('request-ip');
+const { Ratelimit } = require('@upstash/ratelimit');
+const container = require('../src/Infrastructures/container');
+const createServer = require('../src/Infrastructures/http/createServer');
 
 // INFO : Hack so i can deploy it to vercel, though it will be slower
 const ratelimit = new Ratelimit({
