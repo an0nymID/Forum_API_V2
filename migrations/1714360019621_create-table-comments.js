@@ -1,5 +1,3 @@
-exports.shorthands = undefined;
-
 exports.up = (pgm) => {
   pgm.createTable('comments', {
     id: {
@@ -18,6 +16,11 @@ exports.up = (pgm) => {
       type: 'BOOLEAN',
       notNull: true,
       default: false,
+    },
+    like_count: {
+      type: 'INT',
+      notNull: true,
+      default: 0,
     },
     thread_id: {
       type: 'VARCHAR(50)',
