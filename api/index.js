@@ -11,6 +11,8 @@ const ratelimit = new Ratelimit({
   limiter: Ratelimit.slidingWindow(1, '1 s'),
 });
 
+const server = await createServer(container);
+
 module.exports = async function (request, response) {
   const ip = requestIp.getClientIp(request);
   const { body, headers, method, url } = request;
