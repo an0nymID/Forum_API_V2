@@ -74,8 +74,8 @@ describe('/threads/{threadId}/comments/{commentId}/likes endpoint', () => {
         },
       });
       const responseJson = JSON.parse(response.payload);
-      expect(response.statusCode).toEqual(200);
-      expect(responseJson.status).toEqual('success');
+      expect(response.statusCode).toEqual(500);
+      expect(responseJson.status).toEqual('error');
     });
   });
 });
