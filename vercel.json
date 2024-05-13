@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "migrate",
+  "builds": [
+      {
+          "src": "api/index.mjs",
+          "use": "@vercel/node"
+      }
+  ],
+  "routes": [
+      {
+          "handle": "filesystem"
+      },
+      {
+          "src": "/(.*)",
+          "dest": "api/index.mjs"
+      }
+  ]
+}
