@@ -3,7 +3,7 @@
   "buildCommand": "migrate",
   "builds": [
       {
-          "src": "api/index.mjs",
+          "src": "api/index.js",
           "use": "@vercel/node"
       }
   ],
@@ -13,7 +13,7 @@
       },
       {
           "src": "/(.*)",
-          "dest": "api/index.mjs"
+          "dest": "api/index.js"
       }
   ]
 }
